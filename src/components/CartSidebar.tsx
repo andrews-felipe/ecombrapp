@@ -4,11 +4,15 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, Minus, Plus, ShoppingBag, Trash2 } from "lucide-react"
 import { useCart } from "@/context/CartContext"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function CartSidebar() {
     const { items, isOpen, closeCart, removeItem, updateQuantity, total, clearCart } = useCart()
     const [email, setEmail] = useState("")
     const [loading, setLoading] = useState(false)
+    const pathname = usePathname()
+
+    if (pathname?.startsWith("/admin")) return null
 
     const fmt = (v: number) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v)
 

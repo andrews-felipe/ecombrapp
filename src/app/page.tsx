@@ -9,7 +9,10 @@ export default async function HomePage() {
     take: 3,
   })
 
-  const categories = ["Relógios", "Bolsas", "Joias", "Viagens", "Automóveis"]
+  const categoriesData = await prisma.product.groupBy({
+    by: ["category"],
+  })
+  const categories = categoriesData.map(c => c.category)
 
   return (
     <div className="min-h-screen bg-neutral-950">

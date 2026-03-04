@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ShoppingBag, Menu, X } from "lucide-react"
 import { useCart } from "@/context/CartContext"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
@@ -17,12 +18,15 @@ export default function Navbar() {
     const { itemCount, openCart } = useCart()
     const [scrolled, setScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
         const handler = () => setScrolled(window.scrollY > 20)
         window.addEventListener("scroll", handler)
         return () => window.removeEventListener("scroll", handler)
     }, [])
+
+    if (pathname?.startsWith("/admin")) return null
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-neutral-950/95 backdrop-blur-md border-b border-neutral-800/50" : "bg-transparent"

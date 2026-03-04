@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:migrate": "prisma migrate dev --name init",
+    "db:migrate": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
-    "db:setup": "prisma migrate dev --name init && tsx prisma/seed.ts"
+    "db:setup": "prisma db push && tsx prisma/seed.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
