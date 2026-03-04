@@ -9,11 +9,16 @@ const navItems = [
     { href: "/admin/products", label: "Produtos", icon: Package },
 ]
 
-export default function AdminSidebar() {
+interface AdminSidebarProps {
+    isOpen?: boolean
+    setIsOpen?: (val: boolean) => void
+}
+
+export default function AdminSidebar({ isOpen, setIsOpen }: AdminSidebarProps) {
     const pathname = usePathname()
 
     return (
-        <aside className="fixed left-0 top-0 h-screen w-64 bg-neutral-900 border-r border-neutral-800 flex flex-col">
+        <aside className={`fixed left-0 top-0 h-screen w-64 bg-neutral-900 border-r border-neutral-800 flex flex-col z-50 transition-transform duration-300 md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
             {/* Brand */}
             <div className="p-6 border-b border-neutral-800">
                 <div className="flex items-center gap-2">
@@ -35,6 +40,7 @@ export default function AdminSidebar() {
                         <Link
                             key={item.href}
                             href={item.href}
+                            onClick={() => setIsOpen?.(false)}
                             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
                 ${isActive
                                     ? "bg-amber-500/10 text-amber-400 border border-amber-500/20"
