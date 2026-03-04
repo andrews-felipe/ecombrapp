@@ -18,10 +18,10 @@ export default function AdminSidebar() {
             <div className="p-6 border-b border-neutral-800">
                 <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
-                        <span className="text-black font-bold text-sm">L</span>
+                        <span className="text-black font-bold text-sm">G</span>
                     </div>
                     <div>
-                        <p className="text-white font-semibold text-sm">LuxeMarket</p>
+                        <p className="text-white font-semibold text-sm">GUARDIAN FINANCE LTDA</p>
                         <p className="text-neutral-500 text-xs">Admin</p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ export default function AdminSidebar() {
             <div className="p-4 border-t border-neutral-800">
                 <div className="flex items-center gap-2 text-neutral-500 text-xs">
                     <Settings className="w-3 h-3" />
-                    <span>LuxeMarket v1.0</span>
+                    <span>GUARDIAN v1.0</span>
                 </div>
             </div>
         </aside>

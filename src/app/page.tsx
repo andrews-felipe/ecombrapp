@@ -153,11 +153,11 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 bg-amber-500 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-xs">L</span>
+              <span className="text-black font-bold text-xs">G</span>
             </div>
-            <span className="font-serif text-white">LuxeMarket</span>
+            <span className="font-serif text-white whitespace-nowrap">GUARDIAN FINANCE LTDA</span>
           </div>
-          <p className="text-neutral-500 text-sm">© 2026 LuxeMarket. Todos os direitos reservados.</p>
+          <p className="text-neutral-500 text-sm text-center">© 2026 Guardian Finance LTDA. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4 text-neutral-500 text-sm">
             <span>Privacidade</span>
             <span>Termos</span>

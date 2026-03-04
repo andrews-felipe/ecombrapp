@@ -31,10 +31,10 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
                     <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:bg-amber-400 transition-colors">
-                        <span className="text-black font-bold text-sm">L</span>
+                        <span className="text-black font-bold text-sm">G</span>
                     </div>
                     <span className="font-serif text-xl tracking-wide text-white hidden sm:block">
-                        Luxe<span className="text-amber-400">Market</span>
+                        GUARDIAN <span className="text-amber-400">FINANCE LTDA</span>
                     </span>
                 </Link>
 

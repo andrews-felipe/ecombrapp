@@ -55,7 +55,7 @@ export default function AdminLoginPage() {
                             <Lock className="w-7 h-7 text-amber-400" />
                         </div>
                         <h1 className="text-2xl font-semibold text-white">Painel Administrativo</h1>
-                        <p className="text-neutral-400 mt-1 text-sm">LuxeMarket — Acesso Restrito</p>
+                        <p className="text-neutral-400 mt-1 text-sm">GUARDIAN FINANCE LTDA — Acesso Restrito</p>
                     </div>
 
                     {error && (
